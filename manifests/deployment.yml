@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ossxpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ossxpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ossxpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ossxpipelinesjavascriptdocker 
+          image: acrk8sdemo001.azurecr.io/ossxpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
